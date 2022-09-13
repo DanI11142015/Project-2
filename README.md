@@ -8,18 +8,18 @@ ETL project
 
 **Description** data on 17K strategy games from the apple app store collected in August 2019
 
-link [17K Mobile Strategy Games] (https://www.kaggle.com/datasets/tristan581/17k-apple-app-store-strategy-games)
+link [17K Mobile Strategy Games](https://www.kaggle.com/datasets/tristan581/17k-apple-app-store-strategy-games)
 
 **Data source 2: iOS App Store**
 
 **Description** over 7k apple iod mobile application data details collected 2018
 
-link [iOS App Store] (https://www.kaggle.com/code/gloriousc/ios-app-store/data)
+link [iOS App Store](https://www.kaggle.com/code/gloriousc/ios-app-store/data)
 
 **Data source 3: Google Play Store Apps**
 
 **Description: over 9k apps from the google play store collected in 2018**
-Link [Google Play Store Apps] (https://www.kaggle.com/datasets/lava18/google-play-store-apps)
+Link [Google Play Store Apps](https://www.kaggle.com/datasets/lava18/google-play-store-apps)
 
 Initial findings in data sources (2-3 sentences)
 1. 1st data source 
@@ -48,4 +48,4 @@ Describe the steps taken to clean and transform the data
 Load
 Describe the final database’s tables/collections
 Embed an image of the ERD (if applicable)
-Describe why the topic was chosen (this can be in the form of a description of the “client’s” needs)https://www.kaggle.com/datasets/tristan581/17k-apple-app-store-strategy-games
+Describe why the topic was chosen (this can be in the form of a description of the “client’s” needs)
