@@ -49,6 +49,16 @@ Initial findings in data sources (2-3 sentences)
 	- App Description was in a second csv table, with duplications of ID, Name, and Size columns
 3. 3rd Data Source
   - Two tables: Primary App Data table, and App Reviews table
+  	- Primary columns: App Name, Category, Rating, Reviews, Size, Installs, Type, Price, Content Rating, Genres, Last Updated, Current Version, Android Version
+  	- Reviews columns: App Name, Translated Review, Sentiment, Sentiment Polarity, Sentiment Subjectivity	
+  - Observations on initial state of data
+  	- Category nearly redundant with Genres
+  	- NaN values in Rating, Reviews, Size, Installs, and Price columns; all columns of Reviews table
+  	- Type column has values 'Free' or 'Paid' so is redundant with Price column
+  	- Size column has numbers appended by 'M' and 'k' for Mega- and kilo-bytes
+  	- Installs column has lower-bound numbers appended by '+'
+  	- Size, Current Version, and Android Version columns have "Varies with device" entries
+  	- Last Updated column has date in format with months written out as words  	
 
 ## Transform
 1. 1st Data Source
@@ -64,6 +74,13 @@ Initial findings in data sources (2-3 sentences)
   	- Unnamed because it makes no sense
 	- Supporting Devices, Screenshots, VPP Licensing because irrelevant
   - No rows had NaN values
+ 3. 3rd Data Source
+  - Dropped rows with NaN values
+  - Dropped Type column
+  - Removed 'M' and 'k' from Size
+  - Removed '+' from Installs
+  - Dropped rows with 'Varies by device'
+  - Changed Last Updated to a numeric Y-M-D datetime format
 
 ## Load
 Description of the final database’s tables/collections:
