@@ -1,8 +1,6 @@
 # Project-2
 ETL project 
-
-
-
+---
 ## Project Proposal
 **Data source 1: 17K Mobile Strategy Games**
 
@@ -38,14 +36,27 @@ Initial findings in data sources (2-3 sentences)
    - 93% of the apps are free
    - the peak of the distribution of ratings is 2.8 to 4.6
    - 80% of the content rating is for everyone
-    
-    
+---
+## Extract
+1. 1st Data Source
+  - Columns: URL, ID, Name, Subtitle, Icon URL, Average User Rating, Price, In-app Purchases, Description,  Developer, Age Rating, Languages, Size, Primary Genre, Genres, Original Release Date, Current Version Release Date
+  - Observations on initial state of data
+  	- Subtitle and In-app Purchases columns have many NaN values, Languages has list of two-letter country codes, and Date columns are in D/M/Y format
+2. 2nd Data Source
+  - Columns: Unnamed, ID, Name, Size, Currency, Price, Total Rating Count, Rating Count Latest Version, Total Average User Rating, Average User Rating Latest Version, Latest Version, Content Rating, Primary Genre
 
-Extract
-Describe the original state of the data
-Transform
-Describe the steps taken to clean and transform the data
-Load
+## Transform
+1. 1st Data Source
+  - Columns dropped: 
+  	- Subtitle and In-app Purchases, because of the NaN values 
+	- Icon URL, because it is irrelevant to analysis
+	- Genres, because these are subgenres of games, and the other datasets are of mixed primary genre without subgenres
+  - Drop Na rows
+  - Converted dates to M/D/Y format
+  - Aggregated Language country codes to a count of languages
+
+## Load
 Describe the final database’s tables/collections
-Embed an image of the ERD (if applicable)
-Describe why the topic was chosen (this can be in the form of a description of the “client’s” needs)
+ERD Diagram
+![ERD Diagram](QuickDBD-Project%202%20ERD.png)
+Our client asked for us to extract all avilable Kaggle data on apps from both Google and Apple app stores, and to clean this data so that as many apps as had complete data in both stores could be compared with one another.
