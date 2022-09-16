@@ -57,6 +57,6 @@ Initial findings in data sources (2-3 sentences)
 
 ## Load
 Describe the final database’s tables/collections
-Embed an image of the ERD (if applicable)
-
+ERD Diagram
+![ERD Diagram](QuickDBD-Project%202%20ERD.png)
 Our client asked for us to extract all avilable Kaggle data on apps from both Google and Apple app stores, and to clean this data so that as many apps as had complete data in both stores could be compared with one another.
